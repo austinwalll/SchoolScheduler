@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.CourseList">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="729dp"
+        android:layout_height="213dp"
+        android:background="#8E9EF3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Course Title:"></TextView>
+
+                <EditText
+                    android:id="@+id/courseTitleET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Course Title"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Term Number:"></TextView>
+
+                <EditText
+                    android:id="@+id/termNumET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Term Number"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Start Date:"></TextView>
+
+                <TextView
+                    android:id="@+id/startDateTV"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:inputType="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="End Date:"></TextView>
+
+                <TextView
+                    android:id="@+id/endDateTV"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:inputType="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Status:"></TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Instructor's Name:"></TextView>
+
+                <EditText
+                    android:id="@+id/instructorNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Name"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Instructor's Phone Number:"></TextView>
+
+                <EditText
+                    android:id="@+id/instructorPhoneNumET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Phone Number"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Instructor's E-Mail Address:"></TextView>
+
+                <EditText
+                    android:id="@+id/instructorEmailET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="E-Mail Address"></EditText>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="648dp"
+        android:layout_marginTop="336dp"
+        android:clickable="true"
+        android:src="@drawable/baseline_add_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="268dp"
+        android:text="Assessments"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/courseDetailsRV"
+        android:layout_width="379dp"
+        android:layout_height="229dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Notes"
+        android:layout_width="401dp"
+        android:layout_height="71dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintLeft_toLeftOf="@id/scrollView2"
+        app:layout_constraintTop_toTopOf="@id/scrollView2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="236dp"
+        android:text="Notes"
+        app:layout_constraintLeft_toLeftOf="@id/scrollView2"
+        app:layout_constraintTop_toTopOf="@id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
